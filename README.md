@@ -46,3 +46,4 @@ Welcome to the Password Generator, a powerful web application created with [Angu
 Contributions are welcomed! Feel free to open issues or submit pull requests to help improve this project.
 
 Happy Password Generating! 💪🔒
+"# PwGenerator" 
