@@ -1,0 +1,71 @@
+<!-- Updated layout using Bootstrap classes -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="text-center">Password Generator Tool</h1>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="passwordLength">Password Length</label>
+            <input
+              class="form-control"
+              type="number"
+              id="passwordLength"
+              (change)="modifyLength($event.target.value)"
+            />
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="includeLetters"
+              (change)="modifyLetters()"
+            />
+            <label class="form-check-label" for="includeLetters">
+              Include Letters
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="includeNumbers"
+              (change)="modifyNumbers()"
+            />
+            <label class="form-check-label" for="includeNumbers">
+              Include Numbers
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="includeSymbols"
+              (change)="modifySymbols()"
+            />
+            <label class="form-check-label" for="includeSymbols">
+              Include Symbols
+            </label>
+          </div>
+          <button
+            class="btn btn-primary mt-3"
+            [disabled]="!isGenerateEnabled()"
+            (click)="buttonClick()"
+          >
+            Generate
+          </button>
+          <div class="mt-4" *ngIf="password">
+            <label>Your Password</label>
+            <input class="form-control" [value]="password" readonly />
+          </div>
+
+          <app-password-strength-meter
+            [password]="password"
+          ></app-password-strength-meter>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

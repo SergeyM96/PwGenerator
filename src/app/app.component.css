@@ -1,0 +1,58 @@
+/* Updated styles for the Password Generator Tool */
+.mainArea {
+  background-color: #f8f9fa; /* Background color for the main area */
+  min-height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #fff; /* Background color for the card */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.card-header {
+  background-color: #007bff; /* Header background color */
+  color: #fff; /* Header text color */
+  font-size: 24px; /* Increase header font size */
+  text-align: center; /* Center align the text horizontally */
+  padding: 15px 0;
+  display: flex;
+  justify-content: center; /* Center align the text vertically */
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 15px; /* Add spacing between form elements */
+}
+
+/* Style checkboxes and labels */
+.form-check-input {
+  margin-right: 5px; /* Add spacing between checkbox and label */
+}
+
+.form-check-label {
+  font-weight: 500; /* Make labels bolder */
+}
+
+/* Style the "Generate" button */
+.btn-primary {
+  background-color: #007bff; /* Button background color */
+  border-color: #007bff; /* Button border color */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Center the card vertically on small screens */
+@media (max-width: 576px) {
+  .mainArea {
+    align-items: flex-start; /* Adjust alignment for small screens */
+  }
+
+  .card {
+    margin-top: 20px; /* Add margin on small screens */
+  }
+}

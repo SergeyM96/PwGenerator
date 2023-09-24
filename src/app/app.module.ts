@@ -1,0 +1,14 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar.component';
+import { PasswordStrengthMeterModule } from './password-strength-meter/password-strength-meter.module'; // Import the module
+
+@NgModule({
+  declarations: [AppComponent, NavbarComponent],
+  imports: [BrowserModule, PasswordStrengthMeterModule], // Add the module here
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
