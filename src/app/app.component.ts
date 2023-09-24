@@ -1,3 +1,4 @@
+// app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -21,7 +22,11 @@ export class AppComponent {
     );
   }
 
-  modifyLength(value: string) {
+  // Modify the 'modifyLength' method to handle event properly
+  modifyLength(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const value = target.value;
+
     const parsedValue = parseInt(value);
 
     if (!isNaN(parsedValue)) {
@@ -32,18 +37,22 @@ export class AppComponent {
     }
   }
 
+  // Modify the 'modifyLetters' method to handle event properly
   modifyLetters() {
     this.includeLetters = !this.includeLetters;
   }
 
+  // Modify the 'modifyNumbers' method to handle event properly
   modifyNumbers() {
     this.includeNumbers = !this.includeNumbers;
   }
 
+  // Modify the 'modifySymbols' method to handle event properly
   modifySymbols() {
     this.includeSymbols = !this.includeSymbols;
   }
 
+  // Modify the 'buttonClick' method to handle password generation
   buttonClick() {
     if (this.isGenerateEnabled()) {
       const numbers = '1234567890';
