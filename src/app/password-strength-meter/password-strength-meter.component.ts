@@ -5,10 +5,15 @@ import { Component, Input } from '@angular/core';
   template: `
     <ng-container *ngIf="password">
       <div class="password-strength">
+        <!-- Display the password strength level -->
         Password Strength:
         <span [ngClass]="calculateStrengthClass()">{{
           calculateStrength()
         }}</span>
+        <!-- Password Strength Criteria -->
+        <!-- Weak: Minimum 6 characters -->
+        <!-- Moderate: Minimum 8 characters, mix of letters and numbers -->
+        <!-- Strong: Minimum 12 characters, mix of letters, numbers, and symbols -->
       </div>
     </ng-container>
   `,

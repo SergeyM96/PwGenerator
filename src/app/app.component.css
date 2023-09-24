@@ -1,58 +1,79 @@
 /* Updated styles for the Password Generator Tool */
 .mainArea {
-  background-color: #f8f9fa; /* Background color for the main area */
-  min-height: 100vh; /* Ensure full viewport height */
+  background-color: #f8f9fa; /* Updated to light grey background color */
+  min-height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 120%;
+  max-width: 1000px;
+  padding: 45px;
+  border-radius: 15px;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card {
-  background-color: #fff; /* Background color for the card */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-}
-
-.card-header {
-  background-color: #007bff; /* Header background color */
-  color: #fff; /* Header text color */
-  font-size: 24px; /* Increase header font size */
-  text-align: center; /* Center align the text horizontally */
-  padding: 15px 0;
-  display: flex;
-  justify-content: center; /* Center align the text vertically */
-  align-items: center;
-}
-
 .form-group {
-  margin-bottom: 15px; /* Add spacing between form elements */
+  margin-bottom: 30px;
 }
 
 /* Style checkboxes and labels */
 .form-check-input {
-  margin-right: 5px; /* Add spacing between checkbox and label */
+  margin-right: 15px;
 }
 
 .form-check-label {
-  font-weight: 500; /* Make labels bolder */
+  font-weight: 600;
+  font-size: 16px;
 }
 
 /* Style the "Generate" button */
 .btn-primary {
-  background-color: #007bff; /* Button background color */
-  border-color: #007bff; /* Button border color */
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 20px;
+  padding: 15px 30px;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Darker background color on hover */
+  background-color: #0056b3;
 }
 
-/* Center the card vertically on small screens */
-@media (max-width: 576px) {
-  .mainArea {
-    align-items: flex-start; /* Adjust alignment for small screens */
-  }
+/* Style the navbar */
+.navbar {
+  background-color: #007bff; /* Updated navbar background color */
+  font-size: 14px;
+}
 
+.navbar-brand {
+  font-size: 24px;
+  color: #fff; /* Navbar brand text color */
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  font-size: 16px;
+  color: #fff; /* Navbar toggler icon color */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
   .card {
-    margin-top: 20px; /* Add margin on small screens */
+    max-width: 90%;
   }
 }

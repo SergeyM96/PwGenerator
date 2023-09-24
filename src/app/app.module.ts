@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar.component';
-import { PasswordStrengthMeterModule } from './password-strength-meter/password-strength-meter.module'; // Import the module
+import { PasswordStrengthMeterModule } from './password-strength-meter/password-strength-meter.module';
+import { PasswordHistoryComponent } from './password-history/password-history.component'; // Import the module
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent, NavbarComponent, PasswordHistoryComponent],
   imports: [BrowserModule, PasswordStrengthMeterModule], // Add the module here
   providers: [],
   bootstrap: [AppComponent],

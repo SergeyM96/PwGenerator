@@ -1,4 +1,3 @@
-// app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -13,6 +12,7 @@ export class AppComponent {
   includeSymbols: boolean = false;
   length: number = 0;
   password: string = '';
+  passwordHistory: string[] = []; // Added password history array
 
   // Define the isGenerateEnabled method
   isGenerateEnabled(): boolean {
@@ -37,17 +37,17 @@ export class AppComponent {
     }
   }
 
-  // Modify the 'modifyLetters' method to handle event properly
+  // Define the 'modifyLetters' method
   modifyLetters() {
     this.includeLetters = !this.includeLetters;
   }
 
-  // Modify the 'modifyNumbers' method to handle event properly
+  // Define the 'modifyNumbers' method
   modifyNumbers() {
     this.includeNumbers = !this.includeNumbers;
   }
 
-  // Modify the 'modifySymbols' method to handle event properly
+  // Define the 'modifySymbols' method
   modifySymbols() {
     this.includeSymbols = !this.includeSymbols;
   }
@@ -81,6 +81,14 @@ export class AppComponent {
       }
 
       this.password = generatedPassword;
+
+      // Add the generated password to the history
+      this.passwordHistory.unshift(this.password);
+
+      // Limit the history to a certain number of passwords (e.g., 10)
+      if (this.passwordHistory.length > 10) {
+        this.passwordHistory.pop();
+      }
     } else {
       alert(
         'Please enter a length higher than 5 and select at least one option.'
