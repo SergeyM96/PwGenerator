@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  // You can add component-specific logic here if needed
+  // Add component-specific logic here(for future use/if needed)
 }

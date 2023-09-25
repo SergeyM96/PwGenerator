@@ -1,6 +1,5 @@
-/* Updated styles for the Password Generator Tool */
 .mainArea {
-  background-color: #f8f9fa; /* Updated to light grey background color */
+  background-color: #c5c9cc; /* Updated to light grey background color */
   min-height: calc(100vh - 40px);
   display: flex;
   justify-content: center;

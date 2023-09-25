@@ -77,7 +77,6 @@ export class PasswordStrengthMeterComponent {
     ).length;
 
     // Calculate the strength based on the flags and symbol count
-
     // Password is Strong when it contains letters, numbers, and symbols
     if (hasNumbers && hasCapitalLetters && hasSmallLetters && hasSymbols) {
       return 100;
